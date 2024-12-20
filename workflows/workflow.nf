@@ -1,4 +1,4 @@
-include { MODULE_NAME } from './modules/module_name.nf'
+include { PROCESS_NAME } from '../modules/module_name.nf'
 
 workflow {
 
