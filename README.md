@@ -5,4 +5,6 @@ This repository can be used as a basis for analysis workflows built with the
 derived from
 [template-nf](https://sydney-informatics-hub.github.io/template-nf-guide/).
 More information about the structure of a workflow can be found
-[here](https://training.nextflow.io/advanced/structure/).
+[here](https://training.nextflow.io/advanced/structure/). Another potentially
+useful template can be found
+[here](https://github.com/FredHutch/workflow-template-nextflow).
