@@ -1,6 +1,6 @@
 include { PROCESS_NAME } from '../modules/module_name.nf'
 
-workflow {
+workflow WORKFLOW {
 
   // def some_parameter = params.some_paramter
 
