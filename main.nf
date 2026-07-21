@@ -7,19 +7,19 @@ nextflow.enable.dsl=2
 
 def startupMsg() {
     log.info """\
-    ===============================================================================
+    =============================================================================
     Pipeline Name
-    ===============================================================================
+    =============================================================================
 
     Created by the Computational Medicine Group | BIH @ Charité
 
-    ===============================================================================
+    =============================================================================
     Workflow run parameters 
-    ===============================================================================
+    =============================================================================
     input       : ${params.input}
     outDir      : ${params.outDir}
     workDir     : ${workflow.workDir}
-    ===============================================================================
+    =============================================================================
 
     """.stripIndent()
 }
@@ -66,6 +66,7 @@ include { WORKFLOW } from './workflows/workflow.nf'
 
 workflow {
 
+  main:
   startupMsg()
   if ( false ) { // Enter some condition!
     helpMessage()
@@ -74,12 +75,6 @@ workflow {
   
   WORKFLOW ()
 
-}
-
-// TODO: Move this inside the workflow as suggested here:
-// https://www.nextflow.io/docs/latest/notifications.html#completion-handler
-// As of 2025-08-21, this does not work and the LSP shows an error for this 
-// solution, but it works
-workflow.onComplete {
+  onComplete:
   completionMsg()
 }
